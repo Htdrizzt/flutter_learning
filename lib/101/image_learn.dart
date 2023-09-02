@@ -7,11 +7,36 @@ class ImageLearn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: const Column(
+      body:  Column(
         children: [
           
+          SizedBox(
+            height: 100,
+            width:100,
+           child :PngImage(name: ImageItems().appleWithBook3,)),
+           Image.network('https://www.pngmart.com/files/13/Rinnegan-PNG-Clipart.png',
+           errorBuilder:(context,error,stackTrace)=> const Icon(Icons.abc_outlined)
+           ),
+           
         ],
       ),
     );
+  }
+}
+
+class ImageItems {
+  final String appleWithBook = "assets/image1.jpg";
+  final String appleWithBook2 = "assets/png/image2.png";
+  final String appleWithBook3 = "image2";
+  final String appleWithBook4 = "image3";
+}
+
+
+class PngImage extends StatelessWidget {
+  const PngImage({super.key, required this.name});
+final String name;
+  @override
+  Widget build(BuildContext context) {
+    return Image.asset('assets/png/$name.png',fit: BoxFit.cover,);
   }
 }
