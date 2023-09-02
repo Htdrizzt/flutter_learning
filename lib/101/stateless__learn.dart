@@ -25,7 +25,7 @@ class StateLessLearn extends StatelessWidget {
   }
 
   // ignore: non_constant_identifier_names
-  SizedBox _emptyBox() => const SizedBox(height: 20,); //basit şeyleri böyle yapabilirsin
+  SizedBox _emptyBox() => const SizedBox(height: 30,); //basit şeyleri böyle yapabilirsin
 }
 
 class _CustomContainer extends StatelessWidget {
