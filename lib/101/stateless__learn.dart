@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 
 class StateLessLearn extends StatelessWidget {
   const StateLessLearn({super.key});
+  final String text2= "veli";
+
+  
+
+  
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +16,7 @@ class StateLessLearn extends StatelessWidget {
         children: [
           
           const TitleTextWidget(text:"ali",),
-          const TitleTextWidget(text: "veli",),
+          TitleTextWidget(text: text2),
           _emptyBox(),
           const TitleTextWidget(text: "yaser",),
           _emptyBox(),
