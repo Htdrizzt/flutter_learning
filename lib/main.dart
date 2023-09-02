@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:learning_101/101/card_learn.dart';
+import 'package:learning_101/101/image_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,6 +23,6 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.transparent,
           elevation: 0,
         )),
-        home:  const CardLearn());
+        home:  const ImageLearn());
   }
 }
