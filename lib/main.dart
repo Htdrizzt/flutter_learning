@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:learning_101/101/demos/note_demos_view.dart';
 import 'package:learning_101/101/stateful_learn.dart';
 
 void main() {

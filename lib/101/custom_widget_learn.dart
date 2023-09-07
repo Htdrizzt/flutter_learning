@@ -4,6 +4,7 @@ class CustomWidgetLeran extends StatelessWidget {
   const CustomWidgetLeran({
     super.key,
   });
+
   final String title = 'food';
 
   @override
@@ -19,15 +20,18 @@ class CustomWidgetLeran extends StatelessWidget {
               child: SizedBox(
                 width: MediaQuery.of(context).size.width,
                 child: CustomFoodButton(
-                  title: title, onPressed: () {  },
-
+                  title: title,
+                  onPressed: () {},
                 ),
               ),
             )),
             const SizedBox(
               height: 200,
             ),
-            CustomFoodButton(title: title, onPressed: () {  },)
+            CustomFoodButton(
+              title: title,
+              onPressed: () {},
+            )
           ],
         ));
   }
@@ -46,8 +50,9 @@ mixin class PaddingUtility {
 class CustomFoodButton extends StatelessWidget
     with ColorUtility, PaddingUtility {
   CustomFoodButton({super.key, required this.title, required this.onPressed});
+
+  final void Function() onPressed;
   final String title;
-  final void Function () onPressed ;
 
   @override
   Widget build(BuildContext context) {
