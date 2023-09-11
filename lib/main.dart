@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:learning_101/101/stateful_learn.dart';
+import 'package:learning_101/101/demos/color_demos_view.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -28,6 +29,6 @@ class MyApp extends StatelessWidget {
               backgroundColor: Colors.transparent,
               elevation: 0,
             )),
-        home: const StatefulLearn());
+        home:  const ColorDemosView());
   }
 }

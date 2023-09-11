@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_101/product/counter_hello_button.dart';
 
 class StatefulLearn extends StatefulWidget {
   const StatefulLearn({super.key});
@@ -8,33 +9,14 @@ class StatefulLearn extends StatefulWidget {
 }
 
 class _StatefulLearnState extends State<StatefulLearn> {
+  String welcomeText = 'Merhaba Yaser';
+
   int _counter = 0;
 
   void updateState(bool isIncerement) {
     setState(() {
       _counter += isIncerement ? 1 : -1;
     });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      floatingActionButton: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [_increment(), _deincrement()],
-      ),
-      body: Column(
-        children: [
-          Center(
-              child: Text(
-            _counter.toString(),
-            style: Theme.of(context).textTheme.headlineLarge?.copyWith(color: Colors.red),
-          )),
-          const Placeholder(color: Colors.green,)
-        ],
-      ),
-    );
   }
 
   FloatingActionButton _increment() {
@@ -53,6 +35,30 @@ class _StatefulLearnState extends State<StatefulLearn> {
             updateState(false);
           },
           child: const Icon(Icons.remove)),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(),
+      floatingActionButton: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [_increment(), _deincrement()],
+      ),
+      body: Column(
+        children: [
+          Center(
+              child: Text(
+            _counter.toString(),
+            style: Theme.of(context).textTheme.headlineLarge?.copyWith(color: Colors.red),
+          )),
+          const Placeholder(
+            color: Colors.green,
+          ),
+          const CounterHelloButton()
+        ],
+      ),
     );
   }
 }
