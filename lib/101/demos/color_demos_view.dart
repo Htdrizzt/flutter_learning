@@ -11,13 +11,22 @@ class _MyWidgetState extends State<ColorDemosView> {
   @override
   Widget build(BuildContext context) {
     return   Scaffold(
-      bottomNavigationBar: BottomNavigationBar(items :  [
-        BottomNavigationBarItem(icon: Container(color:Colors.red, width:10, height:20), label:'red'),
-        BottomNavigationBarItem(icon: Container(color:Colors.yellow, width:10, height:20), label:'red'),
-        BottomNavigationBarItem(icon: Container(color:Colors.blue, width:10, height:20), label:'red')
+      bottomNavigationBar: BottomNavigationBar(items :  const [
+        BottomNavigationBarItem(icon: _ColorContainer(color:Colors.red), label:'red'),
+        BottomNavigationBarItem(icon: _ColorContainer(color:Colors.yellow), label:'red'),
+        BottomNavigationBarItem(icon: _ColorContainer(color:Colors.blue), label:'red')
         ]
       
       
       ));
+  }
+}
+
+class _ColorContainer extends StatelessWidget {
+  const _ColorContainer({required this.color} );
+final Color color;
+  @override
+  Widget build(BuildContext context) {
+    return Container(color:color, width:10, height:10);
   }
 }
