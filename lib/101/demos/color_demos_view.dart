@@ -17,19 +17,18 @@ class _ColorDemosState extends State<ColorDemos> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
-    _backgroundColor= widget.initialColor ?? Colors.transparent;
+    _backgroundColor = widget.initialColor ?? Colors.transparent;
   }
-  
+
   @override
   void didUpdateWidget(covariant ColorDemos oldWidget) {
-    // TODO: implement didUpdateWidget
     super.didUpdateWidget(oldWidget);
     inspect(widget);
     if (widget.initialColor != _backgroundColor && widget.initialColor != null) {
       changeBackgroundColor(widget.initialColor!);
-  }}
+    }
+  }
 
   void changeBackgroundColor(Color color) {
     setState(() {

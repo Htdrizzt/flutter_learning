@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:learning_101/101/list_view_builder.dart';
+import 'package:learning_101/101/demos/my_collection_demos.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,6 +25,6 @@ class MyApp extends StatelessWidget {
               backgroundColor: Colors.transparent,
               elevation: 0,
             )),
-        home: const ListViewBuilder());
+        home: const MyCollectionDemo());
   }
 }
