@@ -1,9 +1,12 @@
 // ignore_for_file: unused_element
 
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 class ColorDemos extends StatefulWidget {
-  const ColorDemos({super.key});
+  const ColorDemos({super.key, required this.initialColor});
+  final Color? initialColor;
 
   @override
   State<ColorDemos> createState() => _ColorDemosState();
@@ -11,6 +14,22 @@ class ColorDemos extends StatefulWidget {
 
 class _ColorDemosState extends State<ColorDemos> {
   Color? _backgroundColor = Colors.transparent;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _backgroundColor= widget.initialColor ?? Colors.transparent;
+  }
+  
+  @override
+  void didUpdateWidget(covariant ColorDemos oldWidget) {
+    // TODO: implement didUpdateWidget
+    super.didUpdateWidget(oldWidget);
+    inspect(widget);
+    if (widget.initialColor != _backgroundColor && widget.initialColor != null) {
+      changeBackgroundColor(widget.initialColor!);
+  }}
 
   void changeBackgroundColor(Color color) {
     setState(() {
