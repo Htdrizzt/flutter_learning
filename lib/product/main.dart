@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Flutter Demo',
-        theme: ThemeData.dark(
+        theme: ThemeData.light(
           useMaterial3: true,
         ).copyWith(
             progressIndicatorTheme: const ProgressIndicatorThemeData(color: Colors.orange),
